@@ -1,0 +1,6 @@
+*.xml
+*.json
+*.iml
+*.class
+/target
+.idea
