@@ -6,7 +6,7 @@ import java.io.OutputStreamWriter;
 import java.lang.reflect.*;
 
 import Serializers.Interfaces.*;
-import Serializers.TestClasses.Test2;
+import Serializers.Annotations.Transient;
 
 public final class XmlSerializer implements Serializer {
 	
@@ -37,7 +37,7 @@ public final class XmlSerializer implements Serializer {
 			sb.append("<" + objectName.getSimpleName() + ">\n");
 
 			for(Field field : fields) {
-				if(field.isAnnotationPresent(Test2.Transient.class)) {
+				if(field.isAnnotationPresent(Transient.class)) {
 					continue;
 				}
 

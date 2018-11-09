@@ -6,7 +6,7 @@ import java.io.OutputStreamWriter;
 import java.lang.reflect.*;
 
 import Serializers.Interfaces.*;
-import Serializers.TestClasses.Test2;
+import Serializers.Annotations.Transient;
 
 public final class JsonSerializer implements Serializer {
 
@@ -38,7 +38,7 @@ public final class JsonSerializer implements Serializer {
 
 			for(int i = 0; i < fields.length; i++) {
 				Field field = fields[i];
-				if(field.isAnnotationPresent(Test2.Transient.class)) {
+				if(field.isAnnotationPresent(Transient.class)) {
 					continue;
 				}
 
